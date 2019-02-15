@@ -182,225 +182,248 @@ class VentanaPrincipal extends JFrame {
 		
 		
 		
-		JPanel panel1=new JPanel(null);
+		JDesktopPane desktopPane=new JDesktopPane();
+		
+			JInternalFrame internalFrame=new JInternalFrame("Datos");
+			internalFrame.getContentPane().setLayout(null);
+			internalFrame.setDefaultCloseOperation(HIDE_ON_CLOSE);
+			internalFrame.setSize(1344, 631);
+			internalFrame.setVisible(true);
 			
-			panel1.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
-			panel1.setBounds(0, 70, 1344, 630);
 			
 			
-			JPanel panel2=new JPanel(null);
-				
-				panel2.setBackground(new Color(240, 253, 255));
-				panel2.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
-				panel2.setBounds(0, 0, 1340, 200);
+			JPanel panel1=new JPanel(null);
+			
+				panel1.setBackground(new Color(240, 253, 255));
+				panel1.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
+				panel1.setBounds(0, 0, 1340, 200);
 				
 								
 				JLabel lblPatientID=new JLabel("Patient ID");
 					lblPatientID.setBounds(10, 10, 80, 20);
 					lblPatientID.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblPatientID);
+				panel1.add(lblPatientID);
 				
 				JTextField txtFPatientID=new JTextField();
 					txtFPatientID.setBounds(90, 10, 80, 20);
 					txtFPatientID.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFPatientID);
+				panel1.add(txtFPatientID);
 				
 				
 				JLabel lblDato=new JLabel("Dato");
 					lblDato.setBounds(230, 10, 50, 20);
 					lblDato.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblDato);
+				panel1.add(lblDato);
 				
 				JTextField txtFDato=new JTextField("15/02/2019");
 					txtFDato.setBounds(280, 10, 100, 20);
 					txtFDato.setFont(new Font("Arial", 1, 12));
 					txtFDato.setHorizontalAlignment(JTextField.RIGHT);
-				panel2.add(txtFDato);
+				panel1.add(txtFDato);
 				
 											
 				JLabel lblName=new JLabel("Name");
 					lblName.setBounds(10, 40, 80, 20);
 					lblName.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblName);
+				panel1.add(lblName);
 				
 				JComboBox comboName=new JComboBox();
 					comboName.addItem("Mr.");
 					comboName.addItem("Ms.");
 					comboName.setBounds(90, 40, 55, 20);
 					comboName.setFont(new Font("Arial", 1, 12));
-				panel2.add(comboName);
+				panel1.add(comboName);
 				
 				JTextField txtFName=new JTextField();
 					txtFName.setBounds(155, 40, 200, 20);
 					txtFName.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFName);
+				panel1.add(txtFName);
 				
 				
 				JLabel lblSex=new JLabel("Sex");
 					lblSex.setBounds(10, 70, 80, 20);
 					lblSex.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblSex);
+				panel1.add(lblSex);
 				
 				JComboBox comboSex=new JComboBox();
 					comboSex.addItem("Male");
 					comboName.addItem("Female");
 					comboSex.setBounds(90, 70, 55, 20);
 					comboSex.setFont(new Font("Arial", 1, 12));
-				panel2.add(comboSex);
+				panel1.add(comboSex);
 				
 								
 				JLabel lblAge=new JLabel("Age");
 					lblAge.setBounds(155, 70, 30, 20);
 					lblAge.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblAge);
+				panel1.add(lblAge);
 				
 				JTextField txtFAge=new JTextField("0");
 					txtFAge.setBounds(180, 70, 30, 20);
 					txtFAge.setFont(new Font("Arial", 1, 12));
 					txtFAge.setHorizontalAlignment(JTextField.RIGHT);
-				panel2.add(txtFAge);
+				panel1.add(txtFAge);
 			
 				
 				JLabel lblMons=new JLabel("Mons");
 					lblMons.setBounds(220, 70, 40, 20);
 					lblMons.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblMons);
+				panel1.add(lblMons);
 				
 				JTextField txtFMons=new JTextField("0");
 					txtFMons.setBounds(253, 70, 30, 20);
 					txtFMons.setFont(new Font("Arial", 1, 12));
 					txtFMons.setHorizontalAlignment(JTextField.RIGHT);
-				panel2.add(txtFMons);
+				panel1.add(txtFMons);
 				
 				
 				JLabel lblDays=new JLabel("Days");
 					lblDays.setBounds(295, 70, 40, 20);
 					lblDays.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblDays);
+				panel1.add(lblDays);
 				
 				JTextField txtFDays=new JTextField("0");
 					txtFDays.setBounds(325, 70, 30, 20);
 					txtFDays.setFont(new Font("Arial", 1, 12));
 					txtFDays.setHorizontalAlignment(JTextField.RIGHT);
-				panel2.add(txtFDays);
+				panel1.add(txtFDays);
 				
 							
 				JLabel lblReferedBy=new JLabel("Referred By:");
 					lblReferedBy.setBounds(10, 100, 80, 20);
 					lblReferedBy.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblReferedBy);
+				panel1.add(lblReferedBy);
 				
 				JTextField txtFReferredBy=new JTextField();
 					txtFReferredBy.setBounds(90, 100, 90, 20);
 					txtFReferredBy.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFReferredBy);
+				panel1.add(txtFReferredBy);
+				
+				JButton btnReferredBy=new JButton();
+					ImageIcon referredBy=new ImageIcon("./Imagenes/Back.png");
+					ImageIcon referredByRed=new ImageIcon(referredBy.getImage().getScaledInstance(10, 10, Image.SCALE_REPLICATE));
+					btnReferredBy.setIcon(referredByRed);
+					btnReferredBy.setBounds(180, 100, 20, 20);
+				panel1.add(btnReferredBy);
 				
 				JTextField txtFReferredBy2=new JTextField();
 					txtFReferredBy2.setBounds(208, 100, 147, 20);
 					txtFReferredBy2.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFReferredBy2);
+				panel1.add(txtFReferredBy2);
 				
 				
 				JLabel lblTime=new JLabel("*Time (hh:mm)");
 					lblTime.setBounds(390, 10, 100, 20);
 					lblTime.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblTime);
+				panel1.add(lblTime);
 				
 				JTextField txtFHH=new JTextField();
 					txtFHH.setBounds(480, 10, 30, 20);
 					txtFHH.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFHH);
+				panel1.add(txtFHH);
 				
 				JLabel lblSeparador=new JLabel(":");
 					lblSeparador.setBounds(520, 10, 20, 20);
 					lblSeparador.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblSeparador);
+				panel1.add(lblSeparador);
 				
 				JTextField txtFMM=new JTextField();
 					txtFMM.setBounds(532, 10, 30, 20);
 					txtFMM.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFMM);
+				panel1.add(txtFMM);
 			
 							
 				JLabel lblLabNo=new JLabel("Lab No");
 					lblLabNo.setBounds(580, 10, 80, 20);
 					lblLabNo.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblLabNo);
+				panel1.add(lblLabNo);
 				
 				JTextField txtFLabNo=new JTextField();
 					txtFLabNo.setBounds(630, 10, 100, 20);
 					txtFLabNo.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFLabNo);
+				panel1.add(txtFLabNo);
 				
 				
 				JLabel lblSampleBy=new JLabel("Sample By");
 					lblSampleBy.setBounds(370, 70, 80, 20);
 					lblSampleBy.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblSampleBy);
+				panel1.add(lblSampleBy);
 				
 				JTextField txtFSampleBy=new JTextField();
 					txtFSampleBy.setBounds(450, 70, 100, 20);
 					txtFSampleBy.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFSampleBy);
+				panel1.add(txtFSampleBy);
+				
+				JButton btnSampleBy=new JButton();
+					ImageIcon sampleBy=new ImageIcon("./Imagenes/Back.png");
+					ImageIcon sampleByRed=new ImageIcon(sampleBy.getImage().getScaledInstance(10, 10, Image.SCALE_REPLICATE));
+					btnSampleBy.setIcon(sampleByRed);
+					btnSampleBy.setBounds(550, 70, 20, 20);
+				panel1.add(btnSampleBy);
 			
 			
 				JLabel lblPanelCode=new JLabel("Panel Code");
 					lblPanelCode.setBounds(370, 100, 80, 20);
 					lblPanelCode.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblPanelCode);
-		
+				panel1.add(lblPanelCode);
+						
 				JTextField txtFPanalCode=new JTextField();
 					txtFPanalCode.setBounds(450, 100, 100, 20);
 					txtFPanalCode.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFPanalCode);
+				panel1.add(txtFPanalCode);
+				
+				JButton btnPanelCode=new JButton();
+					ImageIcon panelCode=new ImageIcon("./Imagenes/Back.png");
+					ImageIcon panelCodeRed=new ImageIcon(panelCode.getImage().getScaledInstance(10, 10, Image.SCALE_REPLICATE));
+					btnPanelCode.setIcon(panelCodeRed);
+					btnPanelCode.setBounds(550, 100, 20, 20);
+				panel1.add(btnPanelCode);
 			
-			
+				
 				JLabel lblPanelID=new JLabel("Panel ID");
 					lblPanelID.setBounds(370, 130, 80, 20);
 					lblPanelID.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblPanelID);
+				panel1.add(lblPanelID);
 				
 				JTextField txtFPanalID=new JTextField();
 					txtFPanalID.setBounds(450, 130, 100, 20);
 					txtFPanalID.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFPanalID);
+				panel1.add(txtFPanalID);
 			
 			
 				JLabel lblEmail=new JLabel("e-mail");
 					lblEmail.setBounds(370, 160, 80, 20);
 					lblEmail.setFont(new Font("Arial", 1, 12));
-				panel2.add(lblEmail);
+				panel1.add(lblEmail);
 				
 				JTextField txtFEmail=new JTextField();
 					txtFEmail.setBounds(450, 160, 100, 20);
 					txtFEmail.setFont(new Font("Arial", 1, 12));
-				panel2.add(txtFEmail);
-		
-	
-				
-				
-				
-			panel1.add(panel2);
+				panel1.add(txtFEmail);
+						
+			internalFrame.add(panel1);
+			
+			
+			
+			JPanel panel2=new JPanel(null);
+				panel2.setBackground(new Color(240, 253, 255));
+				panel2.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
+				panel2.setBounds(0, 200, 1340, 300);
+			
+			internalFrame.add(panel2);
 			
 			
 			
 			JPanel panel3=new JPanel(null);
 				panel3.setBackground(new Color(240, 253, 255));
 				panel3.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
-				panel3.setBounds(0, 200, 1340, 300);
+				panel3.setBounds(0, 500, 1340, 125);
 			
-			panel1.add(panel3);
+			internalFrame.add(panel3);
 			
+			desktopPane.add(internalFrame);
 			
-			
-			JPanel panel4=new JPanel(null);
-				panel4.setBackground(new Color(240, 253, 255));
-				panel4.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
-				panel4.setBounds(0, 500, 1340, 125);
-			
-			panel1.add(panel4);
-			
-		add(panel1, BorderLayout.NORTH);
+		add(desktopPane, BorderLayout.CENTER);
 			
 	}
 	
