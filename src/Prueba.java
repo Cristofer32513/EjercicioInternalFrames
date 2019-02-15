@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 
 class VentanaPrincipal extends JFrame {
 	
@@ -13,6 +15,44 @@ class VentanaPrincipal extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
+		
+		JMenuBar menuBar=new JMenuBar();
+			
+			JMenu menuMasters=new JMenu("Masters");
+			menuBar.add(menuMasters);
+			
+			JMenu menuBooking=new JMenu("Booking");
+			menuBar.add(menuBooking);
+			
+			JMenu menuTestPerform=new JMenu("Test Perform");
+			menuBar.add(menuTestPerform);
+			
+			JMenu menuPrinting=new JMenu("Printing");
+			menuBar.add(menuPrinting);
+			
+			JMenu menuTransaction=new JMenu("Transaction");
+			menuBar.add(menuTransaction);
+			
+			JMenu menuLastReports=new JMenu("Last Reports");
+			menuBar.add(menuLastReports);
+			
+			JMenu menuSetting=new JMenu("Setting");
+			menuBar.add(menuSetting);
+			
+			JMenu menuUtilities=new JMenu("Utilities");
+			menuBar.add(menuUtilities);
+			
+			JMenu menuWindow=new JMenu("Window");
+			menuBar.add(menuWindow);
+			
+			JMenu menuHelp=new JMenu("Help");
+			menuBar.add(menuHelp);
+			
+		setJMenuBar(menuBar);
+		
+		
+		
+		
 	}
 	
 }
