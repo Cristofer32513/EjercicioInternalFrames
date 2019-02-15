@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
 
 class VentanaPrincipal extends JFrame {
 	
@@ -16,6 +14,7 @@ class VentanaPrincipal extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 		
+		//Componentes
 		JMenuBar menuBar=new JMenuBar();
 			
 			JMenu menuMasters=new JMenu("Masters");
@@ -49,6 +48,7 @@ class VentanaPrincipal extends JFrame {
 			menuBar.add(menuHelp);
 			
 		setJMenuBar(menuBar);
+		
 		
 		
 		JToolBar toolBar=new JToolBar();
@@ -156,10 +156,41 @@ class VentanaPrincipal extends JFrame {
 				btnExit.setVerticalTextPosition( SwingConstants.BOTTOM );
 			toolBar.add(btnExit);
 		
-			
 		add(toolBar, BorderLayout.PAGE_START);
 		
 		
+		
+		JPanel panel1=new JPanel(null);
+			panel1.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
+			panel1.setBounds(0, 70, 1344, 630);
+			
+			JPanel panel2=new JPanel(null);
+				panel2.setBackground(new Color(240, 253, 255));
+				panel2.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
+				panel2.setBounds(0, 0, 1340, 200);
+			
+			panel1.add(panel2);
+			
+			
+			
+			JPanel panel3=new JPanel(null);
+				panel3.setBackground(new Color(240, 253, 255));
+				panel3.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
+				panel3.setBounds(0, 200, 1340, 300);
+			
+			panel1.add(panel3);
+			
+			
+			
+			JPanel panel4=new JPanel(null);
+				panel4.setBackground(new Color(240, 253, 255));
+				panel4.setBorder(BorderFactory.createLineBorder(Color.WHITE, 5));
+				panel4.setBounds(0, 500, 1340, 125);
+			
+			panel1.add(panel4);
+			
+		add(panel1, BorderLayout.NORTH);
+			
 	}
 	
 }
